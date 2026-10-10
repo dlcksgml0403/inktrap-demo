@@ -28,7 +28,7 @@
 })();
 </script>
 
-		<title>$GODOT_PROJECT_NAME</title>
+		<title>INKTRAP Proto</title>
 		<style>
 html, body, #canvas {
 	margin: 0;
@@ -63,7 +63,7 @@ body {
 }
 
 #status {
-	background-color: $GODOT_SPLASH_COLOR;
+	background-color: #242424;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -115,7 +115,9 @@ body {
 	z-index: 1;
 }
 		</style>
-		$GODOT_HEAD_INCLUDE
+		<link id="-gd-engine-icon" rel="icon" type="image/png" href="index.icon.png" />
+<link rel="apple-touch-icon" href="index.apple-touch-icon.png"/>
+res://head_include.html
 	</head>
 	<body>
 		<canvas id="canvas">
@@ -127,15 +129,15 @@ body {
 		</noscript>
 
 		<div id="status">
-			<img id="status-splash" class="$GODOT_SPLASH_CLASSES" src="$GODOT_SPLASH" alt="">
+			<img id="status-splash" class="show-image--true fullsize--true use-filter--true" src="index.png" alt="">
 			<progress id="status-progress"></progress>
 			<div id="status-notice"></div>
 		</div>
 
-		<script src="$GODOT_URL"></script>
+		<script src="index.js"></script>
 		<script>
-const GODOT_CONFIG = $GODOT_CONFIG;
-const GODOT_THREADS_ENABLED = $GODOT_THREADS_ENABLED;
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":2891988,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
+const GODOT_THREADS_ENABLED = false;
 const engine = new Engine(GODOT_CONFIG);
 
 (function () {
@@ -240,3 +242,4 @@ const engine = new Engine(GODOT_CONFIG);
 		</script>
 	</body>
 </html>
+
